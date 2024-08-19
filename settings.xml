@@ -3,12 +3,12 @@
         <server>
             <id>github-packages-releases</id>
             <username>lithesheeli</username>
-            <password>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</password>
+            <password>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</password>
         </server>
         <server>
             <id>github-packages-snapshots</id>
             <username>lithesheeli</username>
-            <password>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</password>
+            <password>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</password>
         </server>
     </servers>
 </settings>
