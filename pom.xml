@@ -9,16 +9,13 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <name>gitopscalculator Maven Webapp</name>
+    <name>gitops Maven Webapp</name>
     <url>http://www.example.com</url>
 
     <properties>
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <sonar.projectKey>gitopscalculator</sonar.projectKey>
-        <sonar.organization>gitops</sonar.organization>
-        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
 
     <dependencies>
@@ -51,12 +48,12 @@
 
     <distributionManagement>
         <repository>
-            <id>my-repo-id</id>
-            <url>http://repository.example.com/releases</url>
+            <id>github-packages-releases</id>
+            <url>https://maven.pkg.github.com/lithesheeli/gitops</url>
         </repository>
         <snapshotRepository>
-            <id>my-snapshot-repo-id</id>
-            <url>http://repository.example.com/snapshots</url>
+            <id>github-packages-snapshots</id>
+            <url>https://maven.pkg.github.com/lithesheeli/gitops</url>
         </snapshotRepository>
     </distributionManagement>
 
