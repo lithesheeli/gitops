@@ -1,0 +1,14 @@
+<settings>
+    <servers>
+        <server>
+            <id>github-packages-releases</id>
+            <username>lithesheeli</username>
+            <password>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</password>
+        </server>
+        <server>
+            <id>github-packages-snapshots</id>
+            <username>lithesheeli</username>
+            <password>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</password>
+        </server>
+    </servers>
+</settings>
