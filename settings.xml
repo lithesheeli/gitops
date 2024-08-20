@@ -3,7 +3,7 @@
     <server>
       <id>github-packages-releases</id> <!-- Ensure this ID matches the one used in your `pom.xml` -->
       <username>lithesheeli</username> <!-- Username can be any placeholder, the token is used for auth -->
-      <password>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</password> <!-- Environment variable for security -->
+      <password>${{ secrets.TOKEN }}</password> <!-- Environment variable for security -->
     </server>
   </servers>
   <profiles>
