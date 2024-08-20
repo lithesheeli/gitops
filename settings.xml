@@ -1,9 +1,9 @@
 <settings>
   <servers>
     <server>
-            <id>github-packages-releases</id>
-            <username>lithesheeli</username>
-            <password>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</password>
+      <id>github-packages-releases</id> <!-- Ensure this ID matches the one used in your `pom.xml` -->
+      <username>lithesheeli</username> <!-- Username can be any placeholder, the token is used for auth -->
+      <password>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</password> <!-- Environment variable for security -->
     </server>
   </servers>
   <profiles>
@@ -11,8 +11,8 @@
       <id>github-packages</id>
       <repositories>
         <repository>
-          <id>github-packages</id>
-          <url>https://maven.pkg.github.com/lithesheeli/gitops</url>
+          <id>github-packages-releases</id> <!-- Ensure this ID matches the one used in `settings.xml` -->
+          <url>https://maven.pkg.github.com/lithesheeli/gitops</url> <!-- Repository URL -->
         </repository>
       </repositories>
     </profile>
@@ -21,4 +21,3 @@
     <activeProfile>github-packages</activeProfile>
   </activeProfiles>
 </settings>
-
