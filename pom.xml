@@ -51,10 +51,10 @@
             <id>github-packages-releases</id>
             <url>https://maven.pkg.github.com/lithesheeli/gitops</url>
         </repository>
-        <snapshotRepository>
+<!--         <snapshotRepository>
             <id>github-packages-snapshots</id>
             <url>https://maven.pkg.github.com/lithesheeli/gitops</url>
-        </snapshotRepository>
+        </snapshotRepository> -->
     </distributionManagement>
 
 </project>
