@@ -1,32 +1,60 @@
-<settings>
-  <servers>
-    <server>
-      <id>github-packages-releases</id> <!-- Must match the ID in your `pom.xml` -->
-      <username>lithesheeli</username> <!-- This can be a placeholder -->
-      <password>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</password> <!-- Use environment variable for security -->
-    </server>
-    <server>
-      <id>github-packages-snapshots</id> <!-- Must match the ID in your `pom.xml` -->
-      <username>lithesheeli</username> <!-- This can be a placeholder -->
-      <password>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</password> <!-- Use environment variable for security -->
-    </server>
-  </servers>
-  <profiles>
-    <profile>
-      <id>github-packages</id>
-      <repositories>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.example</groupId>
+    <artifactId>gitops</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>war</packaging>
+
+    <name>gitops Maven Webapp</name>
+    <url>http://www.example.com</url>
+
+    <properties>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.1</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <distributionManagement>
         <repository>
-          <id>github-packages-releases</id> <!-- Match ID from `distributionManagement` -->
-          <url>https://maven.pkg.github.com/lithesheeli/gitops</url> <!-- URL for releases -->
+            <id>github-packages-releases</id>
+            <url>https://maven.pkg.github.com/lithesheeli/gitops</url>
         </repository>
-        <repository>
-          <id>github-packages-snapshots</id> <!-- Match ID from `distributionManagement` -->
-          <url>https://maven.pkg.github.com/lithesheeli/gitops</url> <!-- URL for snapshots -->
-        </repository>
-      </repositories>
-    </profile>
-  </profiles>
-  <activeProfiles>
-    <activeProfile>github-packages</activeProfile>
-  </activeProfiles>
-</settings>
+        <snapshotRepository>
+            <id>github-packages-snapshots</id>
+            <url>https://maven.pkg.github.com/lithesheeli/gitops</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+</project>
