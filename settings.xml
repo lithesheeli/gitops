@@ -12,7 +12,8 @@
       <repositories>
         <repository>
           <id>github-packages-releases</id> <!-- Ensure this ID matches the one used in `settings.xml` -->
-          <url>https://maven.pkg.github.com/lithesheeli/gitops</url> <!-- Repository URL -->
+<!--           <url>https://maven.pkg.github.com/lithesheeli/gitops</url> <!-- Repository URL --> -->
+          <url>https://github.com/lithesheeli/gitops</url> <!-- Repository URL -->
         </repository>
       </repositories>
     </profile>
