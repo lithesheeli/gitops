@@ -1,14 +1,24 @@
 <settings>
-    <servers>
-        <server>
+  <servers>
+    <server>
             <id>github-packages-releases</id>
             <username>lithesheeli</username>
             <password>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</password>
-        </server>
-        <server>
-            <id>github-packages-snapshots</id>
-            <username>lithesheeli</username>
-            <password>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</password>
-        </server>
-    </servers>
+    </server>
+  </servers>
+  <profiles>
+    <profile>
+      <id>github-packages</id>
+      <repositories>
+        <repository>
+          <id>github-packages</id>
+          <url>https://maven.pkg.github.com/lithesheeli/gitops</url>
+        </repository>
+      </repositories>
+    </profile>
+  </profiles>
+  <activeProfiles>
+    <activeProfile>github-packages</activeProfile>
+  </activeProfiles>
 </settings>
+
