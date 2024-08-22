@@ -43,5 +43,5 @@ jobs:
 
     - name: Push Docker image
       run: |
-        docker push lithesh/your-repository:latest
-        docker push lithesh/your-repository:${{ github.sha }}
+        docker push lithesh/myrepo:latest
+        docker push lithesh/myrepo:${{ github.sha }}
