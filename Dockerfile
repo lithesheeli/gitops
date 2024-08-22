@@ -5,7 +5,7 @@ FROM openjdk:11-jre-slim
 WORKDIR /app
 
 # Copy the Maven artifact into the Docker image
-COPY target/your-app.jar /app/your-app.jar
+COPY target/gitops-0.0.1-SNAPSHOT.war /app/gitops-0.0.1-SNAPSHOT.war
 
 # Command to run the application
-CMD ["java", "-jar", "/app/your-app.jar"]
+CMD ["java", "-jar", "/app/gitops-0.0.1-SNAPSHOT.war"]
