@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      packages: write  # Optional: Not necessary for Docker Hub but generally useful
+      packages: write  # Optional: Generally useful, not required for Docker Hub
 
     steps:
     - name: Checkout code
@@ -26,13 +26,13 @@ jobs:
       run: mvn -B package --file pom.xml
 
     - name: List target directory
-      run: ls -la target/  # Debugging step
+      run: ls -la target/  # Debugging step to ensure target directory and files exist
 
     - name: Build Docker image
       run: |
         docker buildx build \
-          --tag ${{ secrets.DOCKER_HUB_USERNAME }}/your-repository:latest \
-          --tag ${{ secrets.DOCKER_HUB_USERNAME }}/your-repository:${{ github.sha }} \
+          --tag lithesh/myrepo:latest \
+          --tag lithesh/myrepo:${{ github.sha }} \
           .
 
     - name: Log in to Docker Hub
@@ -43,5 +43,5 @@ jobs:
 
     - name: Push Docker image
       run: |
-        docker push ${{ secrets.DOCKER_HUB_USERNAME }}/your-repository:latest
-        docker push ${{ secrets.DOCKER_HUB_USERNAME }}/your-repository:${{ github.sha }}
+        docker push lithesh/your-repository:latest
+        docker push lithesh/your-repository:${{ github.sha }}
