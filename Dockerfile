@@ -5,7 +5,7 @@ FROM openjdk:11-jre-slim
 WORKDIR /app
 
 # Copy the Maven artifact into the Docker image
-COPY path/to/target/your-app.jar /app/your-app.jar
+COPY target/your-app.jar /app/your-app.jar
 
 # Command to run the application
 CMD ["java", "-jar", "/app/your-app.jar"]
